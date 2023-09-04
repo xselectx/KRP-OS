@@ -1,0 +1,11 @@
+{
+    "name": "sklep",
+    "description": "sklep",
+    "author": "renosk",
+    "timers": false,
+    "callbacks": false,
+    "mysql": false,
+    "files": [],
+    "commands": false,
+    "date": "06.05.2021"
+}

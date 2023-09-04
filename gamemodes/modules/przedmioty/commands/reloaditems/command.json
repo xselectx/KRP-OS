@@ -1,0 +1,11 @@
+{
+    "name": "reloaditems",
+    "description": "komenda stworzona wrazie naglego wypadku",
+    "permissions": [
+        "admini"
+    ],
+    "author": "renosk",
+    "aliases": [],
+    "parameters": [],
+    "date": "21.06.2021"
+}

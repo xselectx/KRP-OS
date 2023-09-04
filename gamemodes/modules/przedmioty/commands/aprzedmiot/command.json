@@ -1,0 +1,27 @@
+{
+    "name": "aprzedmiot",
+    "description": "Panel przedmiotów dla administratora",
+    "permissions": [
+        "admini"
+    ],
+    "author": "renosk",
+    "aliases": [
+        "ap"
+    ],
+    "parameters": [
+        {
+            "type": "string",
+            "size": "64",
+            "name": "opt1",
+            "description": "stworz, usun, usun_uid, typy, clear3dtext"
+        },
+        {
+            "type": "string",
+            "size": "64",
+            "name": "opt2",
+            "description": "Opcja 2",
+            "defaultValue": ""
+        }
+    ],
+    "date": "12.06.2021"
+}

@@ -1,0 +1,11 @@
+{
+    "name": "system-obiekty",
+    "description": "System obiektow",
+    "author": "renosk",
+    "timers": false,
+    "callbacks": true,
+    "mysql": false,
+    "files": [],
+    "commands": false,
+    "date": "02.04.2021"
+}

@@ -1,0 +1,85 @@
+//-----------------------------------------------<< Header >>------------------------------------------------//
+//                                                   motele                                                  //
+//----------------------------------------------------*------------------------------------------------------//
+//----[                                                                                                 ]----//
+//----[         |||||             |||||                       ||||||||||       ||||||||||               ]----//
+//----[        ||| |||           ||| |||                      |||     ||||     |||     ||||             ]----//
+//----[       |||   |||         |||   |||                     |||       |||    |||       |||            ]----//
+//----[       ||     ||         ||     ||                     |||       |||    |||       |||            ]----//
+//----[      |||     |||       |||     |||                    |||     ||||     |||     ||||             ]----//
+//----[      ||       ||       ||       ||     __________     ||||||||||       ||||||||||               ]----//
+//----[     |||       |||     |||       |||                   |||    |||       |||                      ]----//
+//----[     ||         ||     ||         ||                   |||     ||       |||                      ]----//
+//----[    |||         |||   |||         |||                  |||     |||      |||                      ]----//
+//----[    ||           ||   ||           ||                  |||      ||      |||                      ]----//
+//----[   |||           ||| |||           |||                 |||      |||     |||                      ]----//
+//----[  |||             |||||             |||                |||       |||    |||                      ]----//
+//----[                                                                                                 ]----//
+//----------------------------------------------------*------------------------------------------------------//
+// Autor: xSeLeCTx
+// Data utworzenia: 14.05.2021
+
+//
+
+//------------------<[ Enumy: ]>--------------------
+enum mMotels
+{
+    motUID,                                                     // UID motelu
+    motName[64],                                                // Nazwa motelu
+    motRooms,                                                   // Iloœæ pokoi (-1 nieograniczona)
+    motOccupied,                                                // Iloœæ zajêtych pokoi
+    motPrice,                                                   // Cena za dobê
+    Float:motPosX,                                              // Pozycja X wejœcia
+    Float:motPosY,                                              // Pozycja Y wejœcia
+    Float:motPosZ,                                              // Pozycja Z wejœcia
+    motVW,                                                      // Virtual World wejœcia
+    motInt,                                                     // Interior wejœcia
+    Float:motInX,                                               // Pozycja X wyjœcia
+    Float:motInY,                                               // Pozycja Y wyjœcia
+    Float:motInZ,                                               // Pozycja Z wyjœcia
+    motInVW,                                                    // Virtual World wyjœcia
+    motInInt,                                                   // Interior wyjœcia
+    STREAMER_TAG_PICKUP:motPickup,                              // ID PICKUPU
+    STREAMER_TAG_MAP_ICON:motIcon,                              // ID IKONY
+    STREAMER_TAG_3D_TEXT_LABEL:motText,                         // ID 3DTEXTU NA ZEWN¥TRZ
+    STREAMER_TAG_3D_TEXT_LABEL:motInText                        // ID 3DTEXTU W ŒRODKU
+}
+new Motels[MAX_MOTELS][mMotels];
+
+enum mtraAccess
+{
+    mtraUID,
+    mtraNick[32]
+}
+new MotelRoomsAccess[MAX_MOTEL_ROOMS][MOTEL_MAX_ACCESS][mtraAccess];
+
+enum mtrRooms
+{
+    mtrUID,                                                     // UID pokoju
+    mtrMotUID,                                                  // UID motelu w którym ten pokój siê znajduje
+    mtrRoomNum,                                                 // Wygenerowany numer pokoju
+    mtrInterior,                                                // ID interioru z tablicy MotelInteriors
+    mtrOwnerUID,                                                // UID w³aœciciela pokoju
+    mtrDoors,                                                   // Status drzwi, 0 - zamkniête, 1 - otwarte
+    mtrLastOnline[32],                                          // Kiedy w³aœciciel by³ ostatnio online
+    mtrPayOffline,                                              // Dane przechowywane dla komunikatu ile gracz zap³aci³ gdy by³ offline
+    mtrAccessCount                                              // Iloœæ UID w mtrAccess
+}
+new MotelRooms[MAX_MOTEL_ROOMS][mtrRooms];
+
+enum mtiInteriors {
+    Float:mtiPosX, Float:mtiPosY, Float:mtiPosZ, mtiInt
+};
+new MotelInteriors[][mtiInteriors] = 
+{
+    //PosX, PosY, PosZ, Interior
+    {244.41, 305.03, 999.14,  1},
+    {267.04, 304.92, 999.14,  2},
+    {443.64, 509.23, 1001.41, 12},
+    {2254.69, -1139.93, 1050.63, 9},
+    {2260.03, -1135.88, 1050.63, 10}
+};
+//-----------------<[ Zmienne: ]>-------------------
+//------------------<[ Forwardy: ]>--------------------
+
+//end

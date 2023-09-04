@@ -1,0 +1,22 @@
+{
+    "name": "dajkp",
+    "description": "Komenda nadaj¹ca KP dla gracza.",
+    "permissions": [
+        "everyone"
+    ],
+    "author": "Mrucznik",
+    "aliases": [],
+    "parameters": [
+        {
+            "type": "player",
+            "name": "giveplayerid",
+            "description": "Nick/ID"
+        },
+        {
+            "type": "integer",
+            "name": "time",
+            "description": "czas"
+        }
+    ],
+    "date": "09.06.2019"
+}

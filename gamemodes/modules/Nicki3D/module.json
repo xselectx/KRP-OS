@@ -1,0 +1,11 @@
+{
+    "name": "Nicki3D",
+    "description": "System nicków 3d",
+    "author": "Dawidoskyy",
+    "timers": false,
+    "callbacks": true,
+    "mysql": false,
+    "files": [],
+    "commands": false,
+    "date": "27.11.2021"
+}

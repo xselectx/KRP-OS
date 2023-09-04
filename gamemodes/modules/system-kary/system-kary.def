@@ -1,0 +1,21 @@
+
+
+#define PENALTY_WARN		1
+#define PENALTY_KICK		2
+#define PENALTY_BAN		    3
+#define PENALTY_BLOCK		4
+#define PENALTY_AJ		    5
+
+#define PENALTY_UNBLOCK		21
+#define PENALTY_UNBAN		22
+#define PENALTY_UNWARN		23
+
+
+#define BLOCK_CHAR		1
+#define BLOCK_BAN		2
+#define BLOCK_CHAR_BAN	3
+#define BLOCK_CK		4
+#define BLOCK_NOCAR		8
+#define BLOCK_NOOOC		16
+#define BLOCK_NORUN		32
+#define BLOCK_NOGUN 	64

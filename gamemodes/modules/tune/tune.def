@@ -1,0 +1,52 @@
+//-----------------------------------------------<< Defines >>-----------------------------------------------//
+//                                                   tuning                                                  //
+//----------------------------------------------------*------------------------------------------------------//
+//----[                                                                                                 ]----//
+//----[         |||||             |||||                       ||||||||||       ||||||||||               ]----//
+//----[        ||| |||           ||| |||                      |||     ||||     |||     ||||             ]----//
+//----[       |||   |||         |||   |||                     |||       |||    |||       |||            ]----//
+//----[       ||     ||         ||     ||                     |||       |||    |||       |||            ]----//
+//----[      |||     |||       |||     |||                    |||     ||||     |||     ||||             ]----//
+//----[      ||       ||       ||       ||     __________     ||||||||||       ||||||||||               ]----//
+//----[     |||       |||     |||       |||                   |||    |||       |||                      ]----//
+//----[     ||         ||     ||         ||                   |||     ||       |||                      ]----//
+//----[    |||         |||   |||         |||                  |||     |||      |||                      ]----//
+//----[    ||           ||   ||           ||                  |||      ||      |||                      ]----//
+//----[   |||           ||| |||           |||                 |||      |||     |||                      ]----//
+//----[  |||             |||||             |||                |||       |||    |||                      ]----//
+//----[                                                                                                 ]----//
+//----------------------------------------------------*------------------------------------------------------//
+// Autor: xSeLeCTx
+// Data utworzenia: 10.07.2021
+
+//
+
+//------------------<[ Makra: ]>-------------------
+//------------------<[ Define: ]>-------------------
+#define TUNE_TYPE_BUMPER 0 // ZDERZAKI
+#define TUNE_TYPE_SPOILER 1 // SPOILERY
+#define TUNE_TYPE_SIDESKIRT 2 // PROGI
+#define TUNE_TYPE_ROOFS 3 // DACHY
+#define TUNE_TYPE_HOODS 4 // MASKI
+#define TUNE_TYPE_EXHAUSTS 5 // WYDECHY
+#define TUNE_TYPE_VENTS 6 // WLOTY
+#define TUNE_TYPE_LAMPS 7 // LAMPY
+#define TUNE_TYPE_NITRO 8 // NITRO
+#define TUNE_TYPE_FELGA 9 // FELGI
+#define TUNE_TYPE_PAINTJOB 10 // PAINTJOB
+#define TUNE_TYPE_COLOR 11 // KOLOR
+#define TUNE_TYPE_HYDRA 12 // HYDRAULIKA
+#define TUNE_TYPE_NEON 13 // NEONY
+#define TUNE_TYPE_DELETE 14
+#define TUNE_TYPE_FINISH 15
+#define TUNE_TYPE_BUMPER_FRONT 16 // ZDERZAK PRZEDNI
+#define TUNE_TYPE_BUMPER_REAR 17 // ZDERZAK TYLNY
+
+
+#define TUNE_NAME 0
+#define TUNE_TYPE 1
+#define TUNE_COST 2
+#define TUNE_MODEL 3
+
+#define MAX_TUNE_PARTS 20
+//end

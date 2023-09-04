@@ -1,0 +1,11 @@
+{
+    "name": "gazeciarz",
+    "description": "gazeciarz",
+    "author": "Dawidoskyy",
+    "timers": false,
+    "callbacks": true,
+    "mysql": false,
+    "files": [],
+    "commands": true,
+    "date": "23.07.2022"
+}

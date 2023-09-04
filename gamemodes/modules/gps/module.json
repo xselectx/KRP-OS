@@ -1,0 +1,11 @@
+{
+    "name": "gps",
+    "description": "System GPS dla frakcji",
+    "author": "renosk",
+    "timers": true,
+    "callbacks": true,
+    "mysql": false,
+    "files": [],
+    "commands": true,
+    "date": "28.06.2021"
+}

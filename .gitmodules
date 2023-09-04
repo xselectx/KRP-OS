@@ -1,0 +1,7 @@
+[submodule "gamemodes/obiekty"]
+	path = gamemodes/obiekty
+	url = https://github.com/xselectx/KRP-Obiekty-OS
+[submodule "include"]
+	path = include
+	url = https://github.com/xselectx/KRP-Includes-OS
+	

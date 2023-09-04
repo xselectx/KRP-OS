@@ -1,0 +1,116 @@
+//-----------------------------------------------<< Header >>------------------------------------------------//
+//                                                   sklep                                                   //
+//----------------------------------------------------*------------------------------------------------------//
+//----[                                                                                                 ]----//
+//----[         |||||             |||||                       ||||||||||       ||||||||||               ]----//
+//----[        ||| |||           ||| |||                      |||     ||||     |||     ||||             ]----//
+//----[       |||   |||         |||   |||                     |||       |||    |||       |||            ]----//
+//----[       ||     ||         ||     ||                     |||       |||    |||       |||            ]----//
+//----[      |||     |||       |||     |||                    |||     ||||     |||     ||||             ]----//
+//----[      ||       ||       ||       ||     __________     ||||||||||       ||||||||||               ]----//
+//----[     |||       |||     |||       |||                   |||    |||       |||                      ]----//
+//----[     ||         ||     ||         ||                   |||     ||       |||                      ]----//
+//----[    |||         |||   |||         |||                  |||     |||      |||                      ]----//
+//----[    ||           ||   ||           ||                  |||      ||      |||                      ]----//
+//----[   |||           ||| |||           |||                 |||      |||     |||                      ]----//
+//----[  |||             |||||             |||                |||       |||    |||                      ]----//
+//----[                                                                                                 ]----//
+//----------------------------------------------------*------------------------------------------------------//
+// Autor: renosk
+// Data utworzenia: 06.05.2021
+
+//
+
+//------------------<[ Enumy: ]>--------------------
+
+enum _shopProducts {
+	_s_price,
+	_s_type,
+	_s_name[64],
+	_s_category,
+    _s_value1,
+    _s_value2,
+    _s_desc[248]
+};
+
+new shopProducts[][_shopProducts] = {
+	//cena, typ, nazwa, kategoria, value1, value2, opis
+
+	//PRODUKTY SPOï¿½YWCZE
+	{PRICE_SPRUNK, ITEM_TYPE_SPRUNK, "Sprunk", C_SPOZYWCZE, 0, 0, ""},
+	{PRICE_PIWO, ITEM_TYPE_ALCOHOL, "Piwo Mroczny Gul", C_SPOZYWCZE, 0, 0, ""},
+	{PRICE_WINO, ITEM_TYPE_ALCOHOL, "Wino Komandos", C_SPOZYWCZE, 0, 0, ""},
+	{PRICE_CYGARO, ITEM_TYPE_CIGARETTE, "Cygaro", C_SPOZYWCZE, 0, 0, ""},
+
+
+	//SPRZï¿½T
+	{PRICE_TELEFON, ITEM_TYPE_PHONE, "Telefon", C_SPRZET, 0, 0, ""},
+	{PRICE_APARAT, ITEM_TYPE_WEAPON, "Aparat Fotograficzny", C_SPRZET, WEAPON_CAMERA, 100, ""},
+	{PRICE_MP3, ITEM_TYPE_MP3, "Odtwarzacz MP3", C_SPRZET, 0, 0, ""},
+	{PRICE_CBRADIO, ITEM_TYPE_CBRADIO, "CB-Radio", C_SPRZET, 0, 0, ""},
+    {PRICE_TEMPOMAT, ITEM_TYPE_TEMPOMAT, "Tempomat", C_SPRZET, 0, 0, "{D8D8D8}Wciï¿½nij 2 podczas jazdy, ï¿½eby aktywowaï¿½ tempomat. Aby zwiï¿½kszyï¿½ prï¿½dkoï¿½ï¿½ auta wciï¿½nij strzaï¿½kï¿½ w gï¿½re, zmniejszanie strzaï¿½ka w dï¿½."},
+    {PRICE_EPAPIEROS, ITEM_TYPE_VAPE, "E-Papieros", C_SPRZET, 0, 0, "{D8D8D8}Wciï¿½nij prawy przycisk myszki po wyciï¿½gniï¿½ciu e-papierosa aby go uï¿½yï¿½."},
+
+	//INNE
+	{PRICE_KOSTKA, ITEM_TYPE_KOSTKA, "Kostka", C_INNE, 0, 0, ""},
+	{PRICE_KONDOM, ITEM_TYPE_CONDOM, "Kondom", C_INNE, 0, 0, ""},
+	{PRICE_LOM, ITEM_TYPE_LOM, "£om", C_INNE, 0, 0, ""},
+    {PRICE_KSIAZKA_TEL, ITEM_TYPE_PHONEBOOK, "Ksi¹¿ka telefoniczna", C_INNE, 0, 0, ""},
+    {PRICE_BASEBALL, ITEM_TYPE_WEAPON, "Kij Baseballowy", C_INNE, WEAPON_BAT, 1, ""},
+    {PRICE_ZDRAPKA, ITEM_TYPE_ZDRAPKA, "Zdrapka", C_INNE, 0, 0, ""},
+    {PRICE_WYTRYCH, ITEM_TYPE_WYTRYCH, "Wytrych", C_INNE, 0, 0, ""},
+    {PRICE_DESKOROLOKA, ITEM_TYPE_DESKOROLKA, "Deskorolka", C_INNE, 0, 0, ""},
+    {PRICE_DYMIARKA, ITEM_TYPE_DYM, "Dymiarka", C_INNE, 0, 0, ""}, 
+    {PRICE_FLARA, ITEM_TYPE_FLARA, "Flara", C_INNE, 0, 0, ""},
+    {PRICE_MASKA, ITEM_TYPE_MASKA, "Maska", C_INNE, 0, 0, ""}  
+};
+
+//sklep odziezowy
+#define C_NAKRYCIA 0
+#define C_OKULARY 1
+#define C_ZEGARKI 2
+#define C_MASKI 3
+
+enum _clothProducts {
+    _c_model,
+    _c_price,
+    _c_type,
+	_c_name[64],
+	_c_bone
+};
+
+new clothProducts[][_clothProducts] = {
+    //model, price, type, name, bone
+    {18957, 5, C_NAKRYCIA, "Czapka", 2},
+    {18933, 5, C_NAKRYCIA, "Czapka", 2},
+    {18929, 6, C_NAKRYCIA, "Czapka", 2},
+    {18961, 4, C_NAKRYCIA, "Czapka", 2},
+    {18960, 5, C_NAKRYCIA, "Czapka", 2},
+    {18954, 5, C_NAKRYCIA, "Czapka", 2},
+    {18953, 5, C_NAKRYCIA, "Czapka", 2},
+
+    {19010, 10, C_OKULARY, "Okulary przeciws³oneczne", 2},
+    {19023, 15, C_OKULARY, "Okulary przeciws³oneczne", 2},
+    {19024, 15, C_OKULARY, "Okulary przeciws³oneczne", 2},
+    {19138, 15, C_OKULARY, "Okulary przeciws³oneczne", 2},
+
+    {19039, 30, C_ZEGARKI, "Zegarek", 5},
+    {19042, 30, C_ZEGARKI, "Zegarek", 5},
+    {19053, 30, C_ZEGARKI, "Zegarek", 5},
+    {19048, 30, C_ZEGARKI, "Zegarek", 5},
+    {19043, 30, C_ZEGARKI, "Zegarek", 5},
+    {19047, 30, C_ZEGARKI, "Zegarek", 5},
+    {19046, 30, C_ZEGARKI, "Zegarek", 5},
+    {19040, 30, C_ZEGARKI, "Zegarek", 5},
+
+    {18919, 20, C_MASKI, "Bandana", 2},
+    {11704, 10, C_MASKI, "Bandana", 2},
+    {18920, 10, C_MASKI, "Bandana", 2},
+    {19038, 10, C_MASKI, "Bandana", 2}
+
+};
+//-----------------<[ Zmienne: ]>-------------------
+//------------------<[ Forwardy: ]>--------------------
+
+
+//end

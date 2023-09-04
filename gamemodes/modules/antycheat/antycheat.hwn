@@ -1,0 +1,134 @@
+//-----------------------------------------------<< Header >>------------------------------------------------//
+//                                                 antycheat                                                 //
+//----------------------------------------------------*------------------------------------------------------//
+//----[                                                                                                 ]----//
+//----[         |||||             |||||                       ||||||||||       ||||||||||               ]----//
+//----[        ||| |||           ||| |||                      |||     ||||     |||     ||||             ]----//
+//----[       |||   |||         |||   |||                     |||       |||    |||       |||            ]----//
+//----[       ||     ||         ||     ||                     |||       |||    |||       |||            ]----//
+//----[      |||     |||       |||     |||                    |||     ||||     |||     ||||             ]----//
+//----[      ||       ||       ||       ||     __________     ||||||||||       ||||||||||               ]----//
+//----[     |||       |||     |||       |||                   |||    |||       |||                      ]----//
+//----[     ||         ||     ||         ||                   |||     ||       |||                      ]----//
+//----[    |||         |||   |||         |||                  |||     |||      |||                      ]----//
+//----[    ||           ||   ||           ||                  |||      ||      |||                      ]----//
+//----[   |||           ||| |||           |||                 |||      |||     |||                      ]----//
+//----[  |||             |||||             |||                |||       |||    |||                      ]----//
+//----[                                                                                                 ]----//
+//----------------------------------------------------*------------------------------------------------------//
+// Autor: Mrucznik
+// Data utworzenia: 16.09.2019
+
+//
+
+//------------------<[ Enumy: ]>--------------------
+enum eNexACAdditionalSettings {
+	OFF, 				// 0
+	KICK,				// 1
+	INSTAKICK,			// 2
+	LVL1KICK,			// 3
+	LVL1MARK,			// 4
+	LVL1INSTAKICK,		// 5
+	ADMIN_WARNING, 		// 6
+	MARK_AS_CHEATER,	// 7
+	MARK_AND_WARNING,	// 8
+	CUSTOM				// 9
+}
+
+//------------------<[ Tablice: ]>--------------------
+new nexac_ac_names[][] = {
+	"Anti-AirBreak (onfoot)",
+	"Anti-AirBreak (in vehicle)",
+	"Anti-teleport hack (onfoot)",
+	"Anti-teleport hack (in vehicle)",
+	"Anti-teleport hack (into/between vehicles)",
+	"Anti-teleport hack (vehicle to player)",
+	"Anti-teleport hack (pickups)",
+	"Anti-FlyHack (onfoot)",
+	"Anti-FlyHack (in vehicle)",
+	"Anti-SpeedHack (onfoot)",
+	"Anti-SpeedHack (in vehicle)",
+	"Anti-Health hack (in vehicle)",
+	"Anti-Health hack (onfoot)",
+	"Anti-Armour hack",
+	"Anti-Money hack",
+	"Anti-Weapon hack",
+	"Anti-Ammo hack (add)",
+	"Anti-Ammo hack (infinite)",
+	"Anti-Special actions hack",
+	"Anti-GodMode from bullets (onfoot)",
+	"Anti-GodMode from bullets (in vehicle)",
+	"Anti-Invisible hack",
+	"Anti-lagcomp-spoof",
+	"Anti-Tuning hack",
+	"Anti-Parkour mod",
+	"Anti-Quick turn",
+	"Anti-Rapid fire",
+	"Anti-FakeSpawn",
+	"Anti-FakeKill",
+	"Anti-Pro Aim",
+	"Anti-CJ run",
+	"Anti-CarShot",
+	"Anti-CarJack",
+	"Anti-UnFreeze",
+	"Anti-AFK Ghost",
+	"Anti-Full Aiming",
+	"Anti-Fake NPC",
+	"Anti-Reconnect",
+	"Anti-High ping",
+	"Anti-Dialog hack",
+	"Protection from the sandbox",
+	"Protection against an invalid version",
+	"Anti-Rcon hack",
+	"Anti-Tuning crasher",
+	"Anti-Invalid seat crasher",
+	"Anti-Dialog crasher",
+	"Anti-Attached object crasher",
+	"Anti-Weapon Crasher",
+	"Flood protection connects to one slot",
+	"Anti-flood callback functions",
+	"Anti-flood change seat",
+	"Anti-Ddos",
+	"Anti-NOP's",
+	"MruAC Anti-FakeKill",
+	"KRP-AC: Speedfire",
+	"KRP-AC: FakeAFK",
+	"KRP-AC: FakeWL",
+	"KRP-AC: FakeKill (2)",
+	"KRP-AC: Anti-Veh GodMode",
+	"KRP-AC: Anti-Weapon Hack",
+	"KRP-AC: Anti-Ammo Hack",
+	"KRP-AC: Anti-Slapper",
+	"KRP-AC: Upside-Down",
+	"KRP-AC: Speedhack (veh)",
+	"KRP-AC: Speedhack (on-foot)",
+	"KRP-AC: Invisible",
+	"KRP-AC: AnimHack",
+	"KRP-AC: FlyHack",
+	"KRP-AC: SilentAim",
+	"KRP-AC: NoSpread",
+	"KRP-AC: Aimbot",
+	"KRP-AC: ZoomHack",
+	"KRP-AC: NoReload",
+	"KRP-AC: SilentAim (2)",
+	"KRP-AC: NoFuel"
+};
+
+
+//-----------------<[ Zmienne: ]>-------------------
+new eNexACAdditionalSettings:nexac_additional_settings[sizeof(nexac_ac_names)];
+
+new PotentialCheaters[MAX_PLAYERS];
+new PotentialCheatersID[MAX_POTENTIAL_CHEATERS];
+new Text:PotentialCheatersTitleTxd;
+new Text:PotentialCheatersTxd[MAX_POTENTIAL_CHEATERS];
+new bool:IsPotentialCheatersTxdVisible[MAX_PLAYERS];
+
+new TakenDamageIssuers[MAX_PLAYERS][MAX_TAKEN_DAMAGE_ISSUERS];
+new TakenDamageIndex[MAX_PLAYERS];
+
+//new PlayerVWDetect[MAX_PLAYERS];
+
+//------------------<[ Forwardy: ]>--------------------
+
+//end

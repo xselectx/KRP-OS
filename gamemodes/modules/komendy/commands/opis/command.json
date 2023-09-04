@@ -1,0 +1,18 @@
+{
+    "name": "opis",
+    "description": "Komenda tworz¹ca opis postaci, który bêdzie widoczny dla innych graczy w formie tekstu 3D.",
+    "permissions": [
+        "everyone"
+    ],
+    "author": "niceczlowiek",
+    "aliases": [],
+    "parameters": [
+        {
+            "type": "string",
+            "size": "256",
+            "name": "text",
+            "description": "opis"
+        }
+    ],
+    "date": "13.05.2019"
+}

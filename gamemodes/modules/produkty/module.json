@@ -1,0 +1,11 @@
+{
+    "name": "produkty",
+    "description": "System produktów dla organizacji",
+    "author": "renosk",
+    "timers": false,
+    "callbacks": true,
+    "mysql": true,
+    "commands": true,
+    "files": [],
+    "date": "31.05.2021"
+}

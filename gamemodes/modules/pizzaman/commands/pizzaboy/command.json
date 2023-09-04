@@ -1,0 +1,11 @@
+{
+    "name": "pizzaboy",
+    "description": "Aktywacja pracy dorywczej Pizzaboya",
+    "permissions": [
+        "everyone"
+    ],
+    "author": "xSeLeCTx",
+    "aliases": [],
+    "parameters": [],
+    "date": "09.05.2021"
+}

@@ -1,0 +1,21 @@
+{
+    "name": "motel",
+    "description": "Panel zarz¹dzania motelem dla gracza",
+    "permissions": [
+        "everyone"
+    ],
+    "author": "xSeLeCTx",
+    "aliases": [
+        "hotel"
+    ],
+    "parameters": [
+        {
+            "type": "string",
+            "size": "64",
+            "name": "action",
+            "description": "Mo¿liwoœæ szybszego zarz¹dzania motelem dla gracza, przyk³ad: (/motel wejdz)",
+            "defaultValue": "null"
+        }
+    ],
+    "date": "15.05.2021"
+}

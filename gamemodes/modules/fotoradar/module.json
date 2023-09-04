@@ -1,0 +1,11 @@
+{
+    "name": "Fotoradar",
+    "description": "Fotoradar",
+    "author": "Dawidoskyy",
+    "timers": false,
+    "callbacks": true,
+    "mysql": false,
+    "files": [],
+    "commands": true,
+    "date": "20.01.2022"
+}

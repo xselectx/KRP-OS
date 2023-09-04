@@ -1,0 +1,11 @@
+{
+    "name": "Szmugler",
+    "description": "Szmugler dla Przestepczych",
+    "author": "AnakinEU",
+    "timers": false,
+    "callbacks": true,
+    "mysql": false,
+    "files": [],
+    "commands": true,
+    "date": "01.11.2021"
+}

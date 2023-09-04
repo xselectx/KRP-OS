@@ -1,0 +1,25 @@
+{
+    "name": "amotel",
+    "description": "Kreator moteli",
+    "permissions": [
+        "admini"
+    ],
+    "author": "xSeLeCTx",
+    "aliases": [],
+    "parameters": [
+        {
+            "type": "string",
+            "size": "64",
+            "name": "action",
+            "description": "Wybor akcji",
+            "defaultValue": "null"
+        },
+        {
+            "type": "string",
+            "size": "256",
+            "name": "value",
+            "description": "Wartosci akcji"
+        }
+    ],
+    "date": "21.05.2021"
+}

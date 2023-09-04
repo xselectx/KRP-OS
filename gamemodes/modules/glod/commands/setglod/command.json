@@ -1,0 +1,22 @@
+{
+    "name": "setglod",
+    "description": "Zmienia g³ód gracza",
+    "permissions": [
+        "admini"
+    ],
+    "author": "renosk",
+    "aliases": [],
+    "parameters": [
+        {
+            "type": "player",
+            "name": "giveplayerid",
+            "description": "Nick/ID"
+        },
+        {
+            "type": "integer",
+            "name": "hunger",
+            "description": "G³ód"
+        }
+    ],
+    "date": "27.05.2021"
+}

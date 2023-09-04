@@ -1,0 +1,11 @@
+{
+    "name": "lsmc_zgloszenia",
+    "description": "system minigierek dla lsmc",
+    "author": "xSeLeCTx",
+    "timers": true,
+    "callbacks": true,
+    "mysql": false,
+    "files": [],
+    "commands": false,
+    "date": "26.12.2021"
+}

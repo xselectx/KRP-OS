@@ -1,0 +1,17 @@
+{
+    "name": "atuning",
+    "description": "Panel tuningu dla administratora",
+    "permissions": [
+        "everyone"
+    ],
+    "author": "xSeLeCTx",
+    "aliases": [],
+    "parameters": [
+        {
+            "type": "integer",
+            "name": "vehicleid",
+            "description": "ID pojazdu"
+        }
+    ],
+    "date": "10.07.2021"
+}

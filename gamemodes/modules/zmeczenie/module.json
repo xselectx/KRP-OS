@@ -1,0 +1,11 @@
+{
+    "name": "zmeczenie",
+    "description": "System zmeczenia",
+    "author": "Dawidoskyy",
+    "timers": false,
+    "callbacks": true,
+    "mysql": false,
+    "files": [],
+    "commands": false,
+    "date": "25.11.2021"
+}

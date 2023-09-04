@@ -1,0 +1,11 @@
+{
+    "name": "System narko",
+    "description": "System narko",
+    "author": "Dawidoskyy",
+    "timers": false,
+    "callbacks": true,
+    "mysql": false,
+    "files": [],
+    "commands": false,
+    "date": "18.12.2021"
+}

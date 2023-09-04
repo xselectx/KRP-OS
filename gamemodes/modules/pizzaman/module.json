@@ -1,0 +1,11 @@
+{
+    "name": "pizzaman",
+    "description": "Praca dorywcza Pizzaboya",
+    "author": "xSeLeCTx",
+    "timers": false,
+    "callbacks": true,
+    "mysql": false,
+    "files": [],
+    "commands": true,
+    "date": "09.05.2021"
+}

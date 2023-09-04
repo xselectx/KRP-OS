@@ -1,0 +1,11 @@
+{
+    "name": "Levele exp",
+    "description": "Levele exp",
+    "author": "Dawidoskyy",
+    "timers": false,
+    "callbacks": true,
+    "mysql": false,
+    "files": [],
+    "commands": true,
+    "date": "20.07.2022"
+}

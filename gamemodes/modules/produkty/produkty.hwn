@@ -1,0 +1,87 @@
+//-----------------------------------------------<< Header >>------------------------------------------------//
+//                                                  produkty                                                 //
+//----------------------------------------------------*------------------------------------------------------//
+//----[                                                                                                 ]----//
+//----[         |||||             |||||                       ||||||||||       ||||||||||               ]----//
+//----[        ||| |||           ||| |||                      |||     ||||     |||     ||||             ]----//
+//----[       |||   |||         |||   |||                     |||       |||    |||       |||            ]----//
+//----[       ||     ||         ||     ||                     |||       |||    |||       |||            ]----//
+//----[      |||     |||       |||     |||                    |||     ||||     |||     ||||             ]----//
+//----[      ||       ||       ||       ||     __________     ||||||||||       ||||||||||               ]----//
+//----[     |||       |||     |||       |||                   |||    |||       |||                      ]----//
+//----[     ||         ||     ||         ||                   |||     ||       |||                      ]----//
+//----[    |||         |||   |||         |||                  |||     |||      |||                      ]----//
+//----[    ||           ||   ||           ||                  |||      ||      |||                      ]----//
+//----[   |||           ||| |||           |||                 |||      |||     |||                      ]----//
+//----[  |||             |||||             |||                |||       |||    |||                      ]----//
+//----[                                                                                                 ]----//
+//----------------------------------------------------*------------------------------------------------------//
+// Autor: renosk
+// Data utworzenia: 31.05.2021
+
+//
+
+//------------------<[ Enumy: ]>--------------------
+
+enum _Product {
+    p_UID,
+    p_OrgID,
+    p_ProductName[64],
+    p_Price,
+    p_Value1,
+    p_Value2,
+    p_Quant,
+    p_ItemType
+};
+
+//-----------------<[ Zmienne: ]>-------------------
+
+new Iterator:Products<MAX_PRODUCTS>;
+new Product[MAX_PRODUCTS][_Product];
+
+//Boty w restauracji
+
+enum _botProducts {
+    _b_Name[32],
+    _b_Price,
+    _b_Value2,
+    _b_Org,
+    _b_ItemType
+};
+
+new botProducts[][_botProducts] = {
+    //nazwa, cena, najedzenie, organizacja, typ przedmiotu
+
+    //Pizzeria Idlewood
+    {"Burger", 85, 50, 28, ITEM_TYPE_FOOD},
+    {"Pizza", 100, 75, 28, ITEM_TYPE_FOOD},
+    {"Zapiekanka", 85, 42, 28, ITEM_TYPE_FOOD},
+    {"Budyñ", 80, 38, 28, ITEM_TYPE_FOOD},
+    {"Frytki", 85, 50, 28, ITEM_TYPE_FOOD},
+    {"Tosty", 78, 42, 28, ITEM_TYPE_FOOD},
+    {"Woda", 10, 25, 28, ITEM_TYPE_DRINK},
+
+    //Mexican Food
+    {"Burger", 85, 50, 57, ITEM_TYPE_FOOD},
+    {"Pizza", 100, 75, 57, ITEM_TYPE_FOOD},
+    {"Zapiekanka", 85, 42, 57, ITEM_TYPE_FOOD},
+    {"Budyñ", 80, 38, 57, ITEM_TYPE_FOOD},
+    {"Frytki", 85, 50, 57, ITEM_TYPE_FOOD},
+    {"Tosty", 78, 42, 57, ITEM_TYPE_FOOD},
+    {"Woda", 10, 25, 57, ITEM_TYPE_DRINK},
+    
+    //Clucking Bell Idlewood
+    {"Nuggets", 27, 35, 53, ITEM_TYPE_FOOD},
+    {"Spicy Chicken", 37, 45, 53, ITEM_TYPE_FOOD},
+    {"Frytki", 22, 25, 53, ITEM_TYPE_FOOD},
+    {"Cluckin Huge", 45, 50, 53, ITEM_TYPE_FOOD},
+    {"Sprunk", 12, 15, 53, ITEM_TYPE_FOOD},
+    {"Hot wings", 28, 30, 53, ITEM_TYPE_FOOD},
+    {"Woda", 10, 25, 53, ITEM_TYPE_DRINK}
+};
+
+//
+
+//------------------<[ Forwardy: ]>--------------------
+
+//end

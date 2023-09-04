@@ -1,0 +1,11 @@
+{
+    "name": "napady",
+    "description": "System napadow",
+    "author": "renosk",
+    "timers": true,
+    "callbacks": true,
+    "mysql": false,
+    "files": [],
+    "commands": false,
+    "date": "13.05.2020"
+}

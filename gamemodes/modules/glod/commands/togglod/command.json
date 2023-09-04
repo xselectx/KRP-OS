@@ -1,0 +1,11 @@
+{
+    "name": "togglod",
+    "description": "Wy³¹cza pasek pokazuj¹cy stan najedzenia",
+    "permissions": [
+        "everyone"
+    ],
+    "author": "renosk",
+    "aliases": [],
+    "parameters": [],
+    "date": "27.05.2021"
+}

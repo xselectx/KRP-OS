@@ -1,0 +1,12 @@
+{
+    "name": "koszyk",
+    "description": "Wyœwietla koszyk tuningu",
+    "permissions": [
+        "everyone"
+    ],
+    "author": "xSeLeCTx",
+    "aliases": [],
+    "parameters": [
+    ],
+    "date": "05.05.2023"
+}

@@ -1,0 +1,89 @@
+//-----------------------------------------------<< Defines >>-----------------------------------------------//
+//                                                   grupy                                                   //
+//----------------------------------------------------*------------------------------------------------------//
+//----[                                                                                                 ]----//
+//----[         |||||             |||||                       ||||||||||       ||||||||||               ]----//
+//----[        ||| |||           ||| |||                      |||     ||||     |||     ||||             ]----//
+//----[       |||   |||         |||   |||                     |||       |||    |||       |||            ]----//
+//----[       ||     ||         ||     ||                     |||       |||    |||       |||            ]----//
+//----[      |||     |||       |||     |||                    |||     ||||     |||     ||||             ]----//
+//----[      ||       ||       ||       ||     __________     ||||||||||       ||||||||||               ]----//
+//----[     |||       |||     |||       |||                   |||    |||       |||                      ]----//
+//----[     ||         ||     ||         ||                   |||     ||       |||                      ]----//
+//----[    |||         |||   |||         |||                  |||     |||      |||                      ]----//
+//----[    ||           ||   ||           ||                  |||      ||      |||                      ]----//
+//----[   |||           ||| |||           |||                 |||      |||     |||                      ]----//
+//----[  |||             |||||             |||                |||       |||    |||                      ]----//
+//----[                                                                                                 ]----//
+//----------------------------------------------------*------------------------------------------------------//
+// Autor: xSeLeCTx
+// Data utworzenia: 11.12.2021
+
+//
+
+//------------------<[ Makra: ]>-------------------
+//------------------<[ Define: ]>-------------------
+#define MAX_GROUPS 200
+#define MAX_PLAYER_GROUPS 3
+#define MAX_VLEADERS 3
+
+#define OLDPERM_RESTAURANT 1
+#define OLDPERM_RACING 2
+#define OLDPERM_MECHANIC 4
+#define OLDPERM_WARSZTAT 8
+#define OLDPERM_GUNDEALER 16
+
+#define PERM_RESTAURANT 1
+#define PERM_RACING 2
+#define PERM_MECHANIC 3
+#define PERM_WARSZTAT 4
+#define PERM_GUNDEALER 5
+#define PERM_POLICE 6
+#define PERM_MEDIC 7
+#define PERM_CRIMINAL 8
+#define PERM_TAXI 9
+#define PERM_GOV 10
+#define PERM_NEWS 11
+#define PERM_FIREDEPT 12
+#define PERM_RADIO 13
+#define PERM_DEPO 14
+#define PERM_BOR 15
+#define PERM_CLUB 16
+#define PERM_LEGALGUNDEALER 17
+#define PERM_MAFIA 18
+#define PERM_GANG 19
+#define PERM_PAYDAY 20
+#define PERM_FINFO 21
+#define PERM_MEGAPHONE 22
+#define PERM_STRZELNICA 23
+#define PERM_HITMAN 24
+#define PERM_TSUNAMIPOOL 25
+#define PERM_LCN 26
+#define PERM_SEKTA 27
+#define PERM_LAWYER 28
+#define PERM_TATTOO 29
+
+//Dialogi
+
+#define D_GROUPLEADERPANEL          7209 
+#define D_GROUPLEADERRANKS          7210
+#define D_GROUPLEADEREDITRANK       7211
+#define D_GROUPLEADEREMPLOYEES      7212
+#define D_GROUP_EMPLOYEE_MANAGE     7213
+#define D_EMPLOYEE_MANAGE_RANK      7214
+#define D_GROUP_LEAVE_CONFIRM       7215
+#define D_GROUP_MANAGE_LEADERS      7216
+#define D_GROUP_MANAGE_LEADER       7217
+#define D_GROUP_ADD_LEADER          7218
+#define D_GROUP_SET_NAME            7219
+#define D_GROUP_SET_SNAME           7220
+#define D_GROUP_SET_COLOR           7221
+#define D_GROUP_INVITE              7222
+#define D_GROUP_ADMIN_PERM          7223
+#define D_AGROUP_MANAGE_SKINS       7224
+#define D_GROUP_VEHICLE             7225
+#define D_GROUPLEADERVEHICLE        7226
+#define D_GROUP_MANAGE_VEHICLE      7227
+#define D_GROUP_MANAGE_V_RANK       7228
+
+//end

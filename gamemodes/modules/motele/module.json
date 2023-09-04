@@ -1,0 +1,11 @@
+{
+    "name": "motele",
+    "description": "System moteli",
+    "author": "xSeLeCTx",
+    "timers": false,
+    "callbacks": true,
+    "mysql": true,
+    "files": [],
+    "commands": true,
+    "date": "14.05.2021"
+}

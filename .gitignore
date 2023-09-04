@@ -1,0 +1,120 @@
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+
+
+#---< My Excludes >---
+#Server files and plugins
+*.exe
+*.dll
+*.so
+*.pdb
+*.db
+*.db-journal
+
+#Plugins igonre
+plugins/**
+
+#AMX file format
+*.amx
+
+#Log files
+*.log
+/*.txt
+
+#rsa key
+id_rsa
+
+
+
+
+#---< SAMPCTL >---
+#
+# Package only files
+#
+
+# Compiled Bytecode, precompiled output and assembly
+*.amx
+*.lst
+*.asm
+*.cfg
+# Vendor directory for dependencies
+dependencies/
+
+# Dependency versions lockfile
+pawn.lock
+
+
+#
+# Server/gamemode related files
+#
+
+# compiled settings file
+# keep `samp.json` file on version control
+# but make sure the `rcon_password` field is set externally
+# you can use the environment variable `SAMP_RCON_PASSWORD` to do this.
+server.cfg
+
+# Plugins directory
+plugins/
+
+# binaries
+*.exe
+*.dll
+*.so
+announce
+samp03svr
+samp-npc
+
+# logs
+logs/
+server_log.txt
+crashinfo.txt
+
+# Ban list
+samp.ban
+
+#
+# Common files
+#
+
+*.sublime-workspace
+
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+# serverfiles
+serverfiles/
+scriptfiles/MySQL/connect.ini
+*.ini
+*.bak
+*.rar
+
+scriptfiles/sobeitlog/**
+scriptfiles/Narkotyki/**
+
+
+KRP-V2-Modele
+.vscode/*
+.vscode/tasks.json
+scriptfiles/rcon/*
+npcmodes/recordings/*.rec
+scriptfiles/sobeitlog_new/**

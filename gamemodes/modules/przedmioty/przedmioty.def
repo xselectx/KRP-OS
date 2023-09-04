@@ -1,0 +1,98 @@
+//-----------------------------------------------<< Defines >>-----------------------------------------------//
+//                                                 przedmioty                                                //
+//----------------------------------------------------*------------------------------------------------------//
+//----[                                                                                                 ]----//
+//----[         |||||             |||||                       ||||||||||       ||||||||||               ]----//
+//----[        ||| |||           ||| |||                      |||     ||||     |||     ||||             ]----//
+//----[       |||   |||         |||   |||                     |||       |||    |||       |||            ]----//
+//----[       ||     ||         ||     ||                     |||       |||    |||       |||            ]----//
+//----[      |||     |||       |||     |||                    |||     ||||     |||     ||||             ]----//
+//----[      ||       ||       ||       ||     __________     ||||||||||       ||||||||||               ]----//
+//----[     |||       |||     |||       |||                   |||    |||       |||                      ]----//
+//----[     ||         ||     ||         ||                   |||     ||       |||                      ]----//
+//----[    |||         |||   |||         |||                  |||     |||      |||                      ]----//
+//----[    ||           ||   ||           ||                  |||      ||      |||                      ]----//
+//----[   |||           ||| |||           |||                 |||      |||     |||                      ]----//
+//----[  |||             |||||             |||                |||       |||    |||                      ]----//
+//----[                                                                                                 ]----//
+//----------------------------------------------------*------------------------------------------------------//
+// Autor: renosk
+// Data utworzenia: 06.05.2021
+
+//
+
+//------------------<[ Define: ]>-------------------
+
+#define SPRUNK_HP 30
+#define ITEM_NOT_COUNT 4
+
+//------------------<[ Limity: ]>-------------------
+
+#define MAX_ITEMS 7500
+#define MAX_ITEM_LIMIT 50
+#define MAX_ITEM_LIMIT_PREMIUM 100
+#define MAX_VEHICLE_ITEMS 20
+
+//------------------<[ Typy w�a�cicieli: ]>-------------------
+
+#define ITEM_OWNER_TYPE_DROPPED 0
+#define ITEM_OWNER_TYPE_PLAYER 1
+#define ITEM_OWNER_TYPE_VEHICLE 2
+
+//------------------<[ Typy przedmiot�w: ]>-------------------
+
+#define ITEM_TYPE_PHONE 0
+#define ITEM_TYPE_SPRUNK 1
+#define ITEM_TYPE_MATS 2
+#define ITEM_TYPE_CBRADIO 3
+#define ITEM_TYPE_LOM 4
+#define ITEM_TYPE_ALCOHOL 5
+#define ITEM_TYPE_CIGARETTE 6
+#define ITEM_TYPE_WEAPON 7
+#define ITEM_TYPE_MP3 8
+#define ITEM_TYPE_KOSTKA 9
+#define ITEM_TYPE_CONDOM 10
+#define ITEM_TYPE_APTECZKA 11
+#define ITEM_TYPE_ATTACH 12
+#define ITEM_TYPE_SKIN 13
+#define ITEM_TYPE_FOOD 14
+#define ITEM_TYPE_PHONEBOOK 15
+#define ITEM_TYPE_ZDRAPKA 16
+#define ITEM_TYPE_TEMPOMAT 17
+#define ITEM_TYPE_VAPE 18
+#define ITEM_TYPE_WYTRYCH 19
+#define ITEM_TYPE_ZEGAREK 20
+#define ITEM_TYPE_LANCUSZEK 21
+#define ITEM_TYPE_MARIHUANA 22
+#define ITEM_TYPE_KRZAK 23
+#define ITEM_TYPE_DESKOROLKA 24
+#define ITEM_TYPE_DRINK 25
+#define ITEM_TYPE_DYM 26
+#define ITEM_TYPE_FLARA 27
+#define ITEM_TYPE_MASKA 28
+#define ITEM_TYPE_KAWALEKM4 29
+#define ITEM_TYPE_KAWALEKAK 30
+
+
+//------------------<[ Dialogi: ]>-------------------
+
+#define D_ITEMS 10202
+#define D_ITEM_OPTIONS 10203
+#define D_ITEM_GIVE 10204
+#define D_ITEM_GIVE_QUANT 10205
+#define D_ITEM_OFFER 10206
+#define D_ITEM_PICKUP 10207
+#define D_PHONE_PANEL 10208
+#define D_PHONE_CALL 10209
+#define D_SMS_NUMBER 10210
+#define D_SMS_SEND 10211
+#define D_TRANSFER_NUMBER 10212
+#define D_TRANSFER_MONEY 10213
+#define D_ITEM_DESTROY_QUANTITY 10214
+#define D_ITEM_DESTROY_QUANTITY_2 10215
+#define D_ITEM_PICKUP_QUANTITY 10216
+#define D_ITEM_VEHICLE_ITEMS 10217
+#define D_TRUNK_ITEMS        10218
+
+
+//end

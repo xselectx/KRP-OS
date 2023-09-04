@@ -1,0 +1,11 @@
+{
+    "name": "reloadproducts",
+    "description": "Prze³adowuje produkty",
+    "permissions": [
+        "admini"
+    ],
+    "author": "renosk",
+    "aliases": [],
+    "parameters": [],
+    "date": "31.05.2021"
+}

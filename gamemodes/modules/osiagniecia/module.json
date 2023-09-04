@@ -1,0 +1,11 @@
+{
+    "name": "Osiagniecia",
+    "description": "Osiagniecia",
+    "author": "Dawidoskyy",
+    "timers": false,
+    "callbacks": true,
+    "mysql": false,
+    "files": [],
+    "commands": true,
+    "date": "18.07.2022"
+}

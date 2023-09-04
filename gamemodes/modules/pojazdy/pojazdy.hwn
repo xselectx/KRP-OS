@@ -1,0 +1,175 @@
+//-----------------------------------------------<< Header >>------------------------------------------------//
+//                                                  pojazdy                                                  //
+//----------------------------------------------------*------------------------------------------------------//
+//----[                                                                                                 ]----//
+//----[         |||||             |||||                       ||||||||||       ||||||||||               ]----//
+//----[        ||| |||           ||| |||                      |||     ||||     |||     ||||             ]----//
+//----[       |||   |||         |||   |||                     |||       |||    |||       |||            ]----//
+//----[       ||     ||         ||     ||                     |||       |||    |||       |||            ]----//
+//----[      |||     |||       |||     |||                    |||     ||||     |||     ||||             ]----//
+//----[      ||       ||       ||       ||     __________     ||||||||||       ||||||||||               ]----//
+//----[     |||       |||     |||       |||                   |||    |||       |||                      ]----//
+//----[     ||         ||     ||         ||                   |||     ||       |||                      ]----//
+//----[    |||         |||   |||         |||                  |||     |||      |||                      ]----//
+//----[    ||           ||   ||           ||                  |||      ||      |||                      ]----//
+//----[   |||           ||| |||           |||                 |||      |||     |||                      ]----//
+//----[  |||             |||||             |||                |||       |||    |||                      ]----//
+//----[                                                                                                 ]----//
+//----------------------------------------------------*------------------------------------------------------//
+// Autor: Mrucznik
+// Data utworzenia: 04.05.2019
+
+//
+
+//------------------<[ Enumy: ]>--------------------
+//-----------------<[ Zmienne: ]>-------------------
+new Car_SlotQueue[1024];
+new pCruiseSpeed[MAX_PLAYERS];
+new pCruiseTXD[MAX_PLAYERS] = 0;
+new pCruiseCanChange[MAX_PLAYERS] = 1;
+
+new PlayerText:Salon_Background[MAX_PLAYERS];
+new PlayerText:Salon_Name[MAX_PLAYERS];
+new PlayerText:Salon_Button[MAX_PLAYERS][2];
+new PlayerText:Salon_Model[MAX_PLAYERS];
+new PlayerText:Salon_Desc[MAX_PLAYERS];
+
+new SalonTypy[][64] = {
+    "Brak",
+    "Sportowy",
+    "Osobowy",
+    "Luksusowy",
+    "Terenowy",
+    "Pick-Up",
+    "Kabriolet",
+    "Lowrider",
+    "Na ka¿d¹ kieszeñ",
+    "Jednoœlady",
+    "Inny"
+};
+
+enum eSalonAut
+{
+    sModel,
+    sCena[64],
+    sVmax,
+    sMiejsca,
+    sOpis[128],
+    sType,
+    sActive
+}
+
+new SalonAut[][eSalonAut] =
+{
+    // Model, Cena, Vmax, Miejsca, Opis, Typ, Aktywny
+    {451, "112.500", 180, 2, "Mo¿e niektórych Ÿdziwiæ", SALON_TYPE_SPORT, 0}, // Turismo
+    {411, "150.000", 205, 2, "Najszybszy pojazd na rynku!", SALON_TYPE_SPORT, 0}, // Infernus
+    {541, "93.750", 188, 2, "Posiada bardzo dobr¹ przyczepnoœæ", SALON_TYPE_SPORT, 0}, // Bullet
+    {506, "87.500", 166, 2, "Dobre szybkie auto", SALON_TYPE_SPORT, 0}, // Super GT
+    {415, "75.000", 178, 2, "Potrzebujesz adrenaliny? Idealnie.", SALON_TYPE_SPORT, 0}, // Cheetah
+    {429, "68.750", 186, 2, "Idealne auto do zabrania na randkê.", SALON_TYPE_SPORT, 0}, // Banshee
+    {480, "62.500", 170, 2, "Zwinne auto, nie jednego nim porobisz.", SALON_TYPE_SPORT, 0}, // Comet
+    {402, "37.500", 172, 2, "Co tak ryczy? Uff, to tylko buffalo..", SALON_TYPE_SPORT, 0}, // Buffalo
+    {477, "32.000", 172, 2, "Chcesz wyrwaæ ma³olate? Kupuj!", SALON_TYPE_SPORT, 0}, // ZR-350
+    {603, "9.750", 158, 2, "Przy zachodz¹cym s³oñcu wygl¹da nieŸle.", SALON_TYPE_SPORT, 0}, // Phoenix
+    {587, "21.225", 152, 2, "Ktoœ tym jeŸdzi?", SALON_TYPE_SPORT, 0}, // Euros
+    {560, "55.000", 156, 4, "Idealne auto czteroosobowe.", SALON_TYPE_SPORT, 0}, // Sultan
+    {559, "25.000", 164, 2, "Przy tuningu wygl¹da naprawdê dobrze.", SALON_TYPE_SPORT, 0}, // Jester
+    {562, "46.000", 164, 2, "Chcesz pokrêciæ b¹czki? To auto naprawdê siê nada.", SALON_TYPE_SPORT, 0}, // Elegy
+    {558, "21.875", 144, 2, "Nie jeden kupowa³ i.. nie ¿alowa³.", SALON_TYPE_SPORT, 0}, // Uranus
+    {602, "11.250", 156, 2, "Ryk silnika przera¿a..", SALON_TYPE_SPORT, 0}, // Alpha
+    {565, "36.250", 152, 2, "Ma³e autko, ale jakie fajne!", SALON_TYPE_SPORT, 0}, // Flash
+    {434, "18.750", 154, 2, "Chcesz poszpanowaæ? Idealnie.", SALON_TYPE_SPORT, 0}, // Hotknife
+
+    {401, "4.000", 136, 2, "Brak", SALON_TYPE_NORMAL, 0}, // Bravura
+    {410, "3.750", 120, 2, "Brak", SALON_TYPE_NORMAL, 0}, // Manana
+    {419, "3.500", 138, 2, "Brak", SALON_TYPE_NORMAL, 0}, // Esperanto
+    {426, "4.500", 160, 4, "Dobre auto na pocz¹tek", SALON_TYPE_NORMAL, 0}, // Premier
+    {436, "2.875", 138, 2, "Brak", SALON_TYPE_NORMAL, 0}, // Previon
+    {516, "4.375", 145, 2, "Potrzebujesz cebuli? Zadzwoñ do nebuli!", SALON_TYPE_NORMAL, 0}, // Nebula
+    {458, "4.125", 145, 4, "Brak", SALON_TYPE_NORMAL, 0}, // Solair
+    {466, "4.500", 136, 4, "Ju¿ lepiej kupiæ Quada..", SALON_TYPE_NORMAL, 0}, // Glendale
+    {467, "4.750", 130, 4, "Brak", SALON_TYPE_NORMAL, 0}, // Oceanic
+    {474, "4.400", 138, 2, "Brak", SALON_TYPE_NORMAL, 0}, // Hermes
+    {475, "7.250", 160, 2, "Dobry zamiennik elegy", SALON_TYPE_NORMAL, 0}, // Sabre
+    {479, "2.900", 129, 4, "Brak", SALON_TYPE_NORMAL, 0}, // Regina
+    {492, "4.350", 130, 4, "Bêdziesz w nim wygl¹da³ niemal jak CJ.", SALON_TYPE_NORMAL, 0}, // Greenwood
+    {496, "6.000", 150, 2, "Dodasz gazu to napêd na przód nieŸle tob¹ zarzuci", SALON_TYPE_NORMAL, 0}, // Blista Compact
+    {517, "3.500", 145, 2, "Brak", SALON_TYPE_NORMAL, 0}, // Majestic
+    {518, "4.550", 152, 2, "Brak", SALON_TYPE_NORMAL, 0}, // Buccaneer
+    {526, "3.750", 146, 2, "Brak", SALON_TYPE_NORMAL, 0}, // Fortune
+    {527, "3.450", 138, 2, "Brak", SALON_TYPE_NORMAL, 0}, // Cadrona
+    {529, "3.350", 138, 4, "Brak", SALON_TYPE_NORMAL, 0}, // Willard
+    {546, "3.350", 138, 4, "Brak", SALON_TYPE_NORMAL, 0}, // Intruder
+    {547, "3.750", 132, 4, "Brak", SALON_TYPE_NORMAL, 0}, // Primo
+    {566, "4.350", 148, 4, "Idealne do wo¿enia siê po oœce", SALON_TYPE_NORMAL, 0}, // Tahoma
+    {585, "2.850", 141, 4, "Mo¿e zaskoczyæ", SALON_TYPE_NORMAL, 0}, // Emperor
+    {589, "5.650", 150, 2, "Wygl¹da jak dobry garbusik!", SALON_TYPE_NORMAL, 0}, // Club
+    {550, "5.350", 134, 4, "Brak", SALON_TYPE_NORMAL, 0}, // Sunrise
+
+    {409, "62.500", 146, 4, "Chcesz wjechaæ zaskakuj¹co? Idealnie.", SALON_TYPE_LUKS, 0}, // Limuzyna
+    {491, "8.750", 138, 2, "Takie.. prosto z wsi.", SALON_TYPE_LUKS, 0}, // Virgo
+    {421, "10.000", 142, 4, "Troche mafijne, nie s¹dzisz?", SALON_TYPE_LUKS, 0}, // Washington
+    {580, "22.500", 142, 4, "Jak z starych filmów, ma klimat..", SALON_TYPE_LUKS, 0}, // Stafford
+    {405, "7.500", 151, 4, "Tanie dobre auto na start.", SALON_TYPE_LUKS, 0}, // Sentinel
+    {445, "11.250", 151, 4, "Ca³kiem, ca³kiem.. chyba.", SALON_TYPE_LUKS, 0}, // Admiral
+    {507, "9.375", 154, 4, "Jak sama nazwa wskazuje eleganckie.", SALON_TYPE_LUKS, 0}, // Elegant
+    {551, "6.250", 145, 4, "Brak", SALON_TYPE_LUKS, 0}, // Merit
+    {561, "35.650", 142, 4, "Auto w sam raz dla rodziny", SALON_TYPE_LUKS, 0}, // Stratum
+    {540, "8.750", 138, 4, "Brak", SALON_TYPE_LUKS, 0}, // Vincent
+
+    {489, "7.500", 129, 2, "Na wieœ idealne!", SALON_TYPE_OFFROAD, 0}, // Rancher
+    {579, "4.400", 146, 4, "Idealne auto dla czterech osób", SALON_TYPE_OFFROAD, 0}, // Huntley
+    {400, "2.500", 146, 4, "Brak", SALON_TYPE_OFFROAD, 0}, // Landstalker
+    {500, "8.750", 130, 2, "Brak", SALON_TYPE_OFFROAD, 0}, // Mesa
+    {424, "12.500", 125, 2, "Auto specjalnie na offroad!", SALON_TYPE_OFFROAD, 0}, // BF Injection
+    {470, "80.000", 145, 4, "Prawdziwy pojazd wojskowy!", SALON_TYPE_OFFROAD, 0}, // Hummer
+
+    {554, "12.500", 133, 2, "Brak", SALON_TYPE_PICKUP, 0}, // Yosemite
+    {422, "1.900", 129, 2, "Najtañszy pickup", SALON_TYPE_PICKUP, 0}, // Bobcat
+    {600, "2.500", 140, 2, "Pickup na misje specjalne", SALON_TYPE_PICKUP, 0}, // Picador
+    {543, "2.250", 140, 2, "Brak", SALON_TYPE_PICKUP, 0}, // Sadler
+    {478, "1.000", 109, 2, "Wiejski pickup", SALON_TYPE_PICKUP, 0}, // Walton
+    {535, "35.500", 146, 2, "Odpicowany pickup", SALON_TYPE_PICKUP, 0}, // Slamvan
+
+    {480, "62.500", 170, 2, "Zwinne auto, nie jednego nim porobisz..", SALON_TYPE_KABRIO, 0}, // Comet
+    {555, "62.500", 146, 2, "Brak", SALON_TYPE_KABRIO, 0}, // Windsor
+    {533, "17.500", 154, 2, "Brak", SALON_TYPE_KABRIO, 0}, // Feltzer
+    {439, "3.250", 156, 2, "Brak", SALON_TYPE_KABRIO, 0}, // Stallion
+
+    {536, "15.000", 160, 2, "Ostry niczym ostrze", SALON_TYPE_LOWRIDER, 0}, // Blade
+    {567, "17.000", 160, 4, "Lowrider idealny na oœke", SALON_TYPE_LOWRIDER, 0}, // Savanna
+    {534, "16.500", 156, 2, "Bajerancki", SALON_TYPE_LOWRIDER, 0}, // Remington
+    {576, "10.000", 146, 2, "Brak", SALON_TYPE_LOWRIDER, 0}, // Tornado
+    {412, "15.000", 156, 2, "Pierwsza bryka dla œciganta", SALON_TYPE_LOWRIDER, 0}, // Voodoo
+    {575, "15.600", 146, 2, "Jedziesz na dziwki?", SALON_TYPE_LOWRIDER, 0}, // Broadway
+
+    {542, "1.200", 152, 2, "Jak za mocno skrêcisz to mo¿e byæ niez³y dach..", SALON_TYPE_POCKET, 0}, // Clover
+    {549, "1.100", 142, 2, "Troche siara..", SALON_TYPE_POCKET, 0}, // Tampa
+    {404, "1.300", 123, 4, "Brak", SALON_TYPE_POCKET, 0}, // Perenail
+    {572, "200", 56, 1, "Jak chcesz siê nabawiæ wstydu..", SALON_TYPE_POCKET, 0}, // Turbowózek / Mower
+    {462, "800", 151, 2, "No na randkê tym nikogo nie zabierzesz.", SALON_TYPE_POCKET, 0}, // Skuter / Faggio
+
+    {522, "125.000", 190, 2, "Uwa¿aj ile gazu dodajesz..", SALON_TYPE_BIKE, 0}, // NRG-500
+    {521, "45.500", 182, 2, "NieŸle ryczy..", SALON_TYPE_BIKE, 0}, // FCR-900
+    {581, "25.250", 162, 2, "Brak", SALON_TYPE_BIKE, 0}, // BF-400
+    {463, "15.250", 165, 2, "Chcesz siê poczuæ jak prawdziwy motocyklista? Dobrze trafi³eœ!", SALON_TYPE_BIKE, 0}, // Freeway
+    {586, "17.350", 177, 2, "Brak", SALON_TYPE_BIKE, 0}, // Wayfarer
+    {468, "12.500", 164, 2, "Dobry motor na offroad", SALON_TYPE_BIKE, 0}, // Sanchez
+    {471, "5.500", 102, 2, "Ewidetnie przyjecha³eœ ze wsi..", SALON_TYPE_BIKE, 0}, // Quad
+    {462, "800", 151, 2, "No na randkê tym nikogo nie zabierzesz.", SALON_TYPE_BIKE, 0}, // Skuter / Faggio
+
+    {482, "10.250", 145, 4, "Dobre auto do transportu", SALON_TYPE_OTHER, 0}, // Burrito
+    {568, "15.350", 135, 1, "Idealne auto na pustynie. Poczujesz siê jak prawdziwy bandyta!", SALON_TYPE_OTHER, 0}, // Bandito
+    {434, "18.750", 154, 2, "Chcesz poszpanowaæ? Idealnie.", SALON_TYPE_OTHER, 0}, // Hotknife
+    {483, "12.500", 113, 2, "Na krótkie wycieczki i na ognisko", SALON_TYPE_OTHER, 0}, // Camper
+    {508, "17.250", 100, 1, "Szukasz mieszkanka? Przenoœna chata na ko³ach!", SALON_TYPE_OTHER, 0}, // Kamping / Journey
+    {545, "12.000", 136, 2, "No, podróbka garbusa..", SALON_TYPE_OTHER, 0} // Hustler
+};
+
+//------------------<[ Forwardy: ]>--------------------
+forward CruiseControl(playerid);
+forward CruiseControl_Static(playerid, type);
+forward CruiseControl_Static_TurnOn(playerid, type);
+forward CruiseControl_ChangedKeyBool(playerid);
+//end

@@ -1,0 +1,11 @@
+{
+    "name": "bilboard",
+    "description": "System bilboard",
+    "author": "xSeLeCTx",
+    "timers": false,
+    "callbacks": false,
+    "mysql": false,
+    "files": [],
+    "commands": true,
+    "date": "17.07.2022"
+}

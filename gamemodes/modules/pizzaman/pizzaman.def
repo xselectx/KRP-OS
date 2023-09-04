@@ -1,0 +1,48 @@
+//-----------------------------------------------<< Defines >>-----------------------------------------------//
+//                                                  pizzaman                                                 //
+//----------------------------------------------------*------------------------------------------------------//
+//----[                                                                                                 ]----//
+//----[         |||||             |||||                       ||||||||||       ||||||||||               ]----//
+//----[        ||| |||           ||| |||                      |||     ||||     |||     ||||             ]----//
+//----[       |||   |||         |||   |||                     |||       |||    |||       |||            ]----//
+//----[       ||     ||         ||     ||                     |||       |||    |||       |||            ]----//
+//----[      |||     |||       |||     |||                    |||     ||||     |||     ||||             ]----//
+//----[      ||       ||       ||       ||     __________     ||||||||||       ||||||||||               ]----//
+//----[     |||       |||     |||       |||                   |||    |||       |||                      ]----//
+//----[     ||         ||     ||         ||                   |||     ||       |||                      ]----//
+//----[    |||         |||   |||         |||                  |||     |||      |||                      ]----//
+//----[    ||           ||   ||           ||                  |||      ||      |||                      ]----//
+//----[   |||           ||| |||           |||                 |||      |||     |||                      ]----//
+//----[  |||             |||||             |||                |||       |||    |||                      ]----//
+//----[                                                                                                 ]----//
+//----------------------------------------------------*------------------------------------------------------//
+// Autor: xSeLeCTx
+// Data utworzenia: 09.05.2021
+
+//
+
+//------------------<[ Makra: ]>-------------------
+//------------------<[ Define: ]>-------------------
+#define PIZZABOY_TIP 40 // ile gracz dostanie MAX napiwku 
+#define PIZZABOY_RARE_TIP 880 // wielkosc napiwku od rzadkiego klienta - moneyEvent = 3
+#define PIZZABOY_RARE_CHANCE 100 // random(Chance), wykona sie gdy wylosuje liczbę 1 z RareChance
+#define PIZZABOY_TIME_RATE 10 // Distance / Time_Rate w AddCustomer - ile czasu będzie miał gracz na dojechanie
+#define PIZZABOY_PIZZERIA_VW 9 // vw pizzerii
+#define PIZZABOY_PIZZERIA_INT 9 // int pizzerii
+#define PIZZABOY_END_MONEY 5 // bonusowe pieniadze za kazda dowieziona pizze
+
+
+#define PIZZABOY_STATE_NONE     0
+#define PIZZABOY_STATE_GETPIZZA 1
+#define PIZZABOY_STATE_PACKING  2
+#define PIZZABOY_STATE_GOTOCAR  3
+#define PIZZABOY_STATE_DELIVER  4
+#define PIZZABOY_STATE_PICKUP   5
+#define PIZZABOY_STATE_GOBACK   6
+
+#define PIZZABOY_TIME_RESTART   10
+#define PIZZABOY_TIME_PACKING   5
+#define PIZZABOY_TIME_GOTOCAR   120
+#define PIZZABOY_TIME_PICKUP    5
+
+//end

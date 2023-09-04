@@ -1,0 +1,22 @@
+{
+    "name": "fracgps",
+    "description": "W³¹cza GPS dla frakcji",
+    "permissions": [
+        "frakcja_LSPD",
+        "frakcja_FBI",
+        "frakcja_SASP",
+        "frakcja_LSMC",
+        "frakcja_USSS",
+        "frakcja_HA",
+        "frakcja_SAN",
+        "frakcja_KT",
+        "frakcja_GOV",
+        "frakcja_LSFD"
+    ],
+    "author": "renosk",
+    "aliases": [
+        "fgps"
+    ],
+    "parameters": [],
+    "date": "28.06.2021"
+}

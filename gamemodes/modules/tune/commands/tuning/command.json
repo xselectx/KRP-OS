@@ -1,0 +1,17 @@
+{
+    "name": "tuning",
+    "description": "Panel tuningu dla warsztatow",
+    "permissions": [
+        "everyone"
+    ],
+    "author": "xSeLeCTx",
+    "aliases": [],
+    "parameters": [
+        {
+            "type": "player",
+            "name": "giveplayerid",
+            "description": "Nick/ID"
+        }
+    ],
+    "date": "10.07.2021"
+}

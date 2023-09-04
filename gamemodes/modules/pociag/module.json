@@ -1,0 +1,8 @@
+{
+    "name": "pociag",
+    "description": "NPC CJ jezdzi pociagiem.",
+    "author": "Ank",
+    "callbacks": true,
+    "commands": false,
+    "date": "04.05.2019"
+}

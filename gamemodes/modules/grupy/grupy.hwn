@@ -1,0 +1,87 @@
+//-----------------------------------------------<< Header >>------------------------------------------------//
+//                                                   grupy                                                   //
+//----------------------------------------------------*------------------------------------------------------//
+//----[                                                                                                 ]----//
+//----[         |||||             |||||                       ||||||||||       ||||||||||               ]----//
+//----[        ||| |||           ||| |||                      |||     ||||     |||     ||||             ]----//
+//----[       |||   |||         |||   |||                     |||       |||    |||       |||            ]----//
+//----[       ||     ||         ||     ||                     |||       |||    |||       |||            ]----//
+//----[      |||     |||       |||     |||                    |||     ||||     |||     ||||             ]----//
+//----[      ||       ||       ||       ||     __________     ||||||||||       ||||||||||               ]----//
+//----[     |||       |||     |||       |||                   |||    |||       |||                      ]----//
+//----[     ||         ||     ||         ||                   |||     ||       |||                      ]----//
+//----[    |||         |||   |||         |||                  |||     |||      |||                      ]----//
+//----[    ||           ||   ||           ||                  |||      ||      |||                      ]----//
+//----[   |||           ||| |||           |||                 |||      |||     |||                      ]----//
+//----[  |||             |||||             |||                |||       |||    |||                      ]----//
+//----[                                                                                                 ]----//
+//----------------------------------------------------*------------------------------------------------------//
+// Autor: xSeLeCTx
+// Data utworzenia: 11.12.2021
+
+//
+
+//------------------<[ Enumy: ]>--------------------
+enum eGroups {
+    g_UID,
+    g_Name[64],
+    g_ShortName[32],
+    g_Color,
+    Float:g_Spawn[4],
+    g_Int,
+    g_VW,
+    g_Flags[100],
+    g_Leader,
+    g_vLeaders[MAX_VLEADERS],
+    g_Money,
+    g_Mats,
+    g_Skin[20],
+    g_MaxDuty
+};
+new GroupInfo[MAX_GROUPS][eGroups];
+new GroupRanks[MAX_GROUPS][MAX_RANG][MAX_RANG_LEN];
+//-----------------<[ Zmienne: ]>-------------------
+//GRUPY
+new PlayerText:SystemGrup[MAX_PLAYERS];
+new PlayerText:NazwaGrupy[MAX_PLAYERS][3];
+new PlayerText:DutyGrupy[MAX_PLAYERS][3];
+new PlayerText:InfoGrupy[MAX_PLAYERS][3];
+new PlayerText:PojazdyGrupy[MAX_PLAYERS][3];
+new PlayerText:OnlineGrupy[MAX_PLAYERS][3];
+
+
+//UPRAWNIENIA
+new gUprawnieniaInfo[][] = {
+    {"Panel restauracji"},
+    {"Panel wyscigów"},
+    {"Uprawnienia mechanika"},
+    {"Uprawnienia warsztatu"},
+    {"Uprawnienia dilera broni"},
+    {"Uprawnienia policji"},
+    {"Uprawnienia medyka"},
+    {"Uprawnienia grupy przestêpczej"},
+    {"Uprawnienia Taxi"},
+    {"Uprawnienia rz¹du"},
+    {"Uprawnienia reportera"},
+    {"Uprawnienia stra¿aka"},
+    {"Uprawnienia do radia"},
+    {"Uprawnienia do /depo"},
+    {"Uprawnienia BOR"},
+    {"Uprawnienia klubu"},
+    {"Uprawnienia do sprzeda¿y legalnej broni"},
+    {"Uprawnienia mafii"},
+    {"Uprawnienia gangu"},
+    {"Uprawnienia do wyp³at"},
+    {"Uprawnienia do komunikatów"},
+    {"Uprawnienia do megafonu"},
+    {"Uprawnienia strzelnicy"},
+    {"Hitman"},
+    {"Basen Tsunami"},
+    {"LCN"},
+    {"Sekta"},
+    {"Uprawnienia prawnika"},
+    {"Uprawnienia do tatua¿y"}
+};
+//------------------<[ Forwardy: ]>--------------------
+
+//end

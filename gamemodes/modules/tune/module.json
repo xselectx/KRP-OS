@@ -1,0 +1,11 @@
+{
+    "name": "tune",
+    "description": "Nowy system tuningu, dzialajacy na zasadzie obiektow doczepialnych do pojazdu",
+    "author": "xSeLeCTx",
+    "timers": false,
+    "callbacks": true,
+    "mysql": true,
+    "files": [],
+    "commands": true,
+    "date": "10.07.2021"
+}

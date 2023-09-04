@@ -1,0 +1,11 @@
+{
+    "name": "przedmioty",
+    "description": "System przedmiotów",
+    "author": "renosk",
+    "timers": true,
+    "callbacks": true,
+    "mysql": true,
+    "files": ["przedmioty_telefon.pwn"],
+    "commands": true,
+    "date": "06.05.2021"
+}

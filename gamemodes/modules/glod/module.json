@@ -1,0 +1,11 @@
+{
+    "name": "glod",
+    "description": "System g³odu",
+    "author": "renosk",
+    "timers": true,
+    "callbacks": true,
+    "mysql": false,
+    "files": [],
+    "commands": true,
+    "date": "26.05.2021"
+}
